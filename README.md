@@ -15,7 +15,7 @@ A free and open source distributed version control system designed to handle eve
 The easiest way to get Git installed is by installing GitHub for Windows. The installer includes a command line version of Git as well as the GUI. It also works well with Powershell.You can download this from the GitHub for Windows [website](http://windows.github.com).
 
 
-##### Mac OSX
+##### OSX
 There are several ways to install Git on a Mac. The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time. If you don’t have it installed already, it will prompt you to install it.
 
 An OSX Git installer is maintained and available for download at the Git [website](http://git-scm.com/download/mac).
@@ -28,8 +28,10 @@ An extremely popular NoSQL database that organises data as sets of key-value pai
 ##### Windows
 The Windows installer for MongoDB can be obtained from the MongoDB [website](https://www.mongodb.org/downloads).
 
-##### Mac OSX
+##### OSX
 The OSX installer for MongoDB can  also be obtained from the MongoDB [website](https://www.mongodb.org/downloads).
+
+Also install [RoboMongo](http://robomongo.org/) and admin tool for MongoDB. 
 
 #### Python and pip.
 Python is high level programming language with a multitude of uses. pip is an installation tool that makes installing python libraries relatively painless. It comes bundled with Python after version 2.7.9. So, if you follow the instructions below you wont have to download it separately.
@@ -37,7 +39,7 @@ Python is high level programming language with a multitude of uses. pip is an in
 ##### Windows
 Download the Windows installer for python [here](https://www.python.org/downloads/release/python-2710/). 
 
-##### Mac OSX
+##### OSX
 Python does come pre installed on OSX. However, it is version 2.7.5.
 
 Download the OSX installer for python [here](https://www.python.org/downloads/release/python-2710/).
@@ -56,10 +58,51 @@ The Windows installer can be found at [here](https://nodejs.org/download/).
 
 Clusterer
 ---------
+For the Clusterer you need to install a few Python libraries with Pip.
 
-#### Windows
+### Numpy
+NumPy is the fundamental package for scientific computing with Python.
 
-#### OSX
+##### Windows
+Open a command window and run 	pip install -U numpy
+
+##### OSX
+Open a terminal and run sudo pip install -U numpy
+
+You can make sure its properly installed by opening up a python interpreter and type 'import numpy'
+
+##### SciPy
+
+##### Windows
+Open a command window and run 	pip install -U scipy
+
+##### OSX
+Open a terminal and run sudo pip install -U scipy
+
+You can make sure its properly installed by opening up a python interpreter and type 'import scipy'
+
+##### Nltk
+Nltk is a leading platform for building Python programs to work with human language data.
+
+##### Windows
+Open a command window and run pip install -U nltk
+
+##### OSX
+Open a terminal and run sudo pip install -U nltk
+
+You can make sure its properly installed by opening up a python interpreter and type 'import nltk'.
+
+##### Sklearn
+Leading python library for data mining and data analysis.
+
+##### Windows
+Open a command window and run pip install -U scikit-learn
+
+##### OSX
+Open a terminal and run sudo pip install -U scikit-learn
+
+You can make sure its properly installed by opening up a python interpreter and type 'import scikit-learn'.
+
 
 Crawler
 --------
