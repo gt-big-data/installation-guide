@@ -110,3 +110,12 @@ Crawler
 
 #### OSX
 
+
+Entity Tagging
+--------
+#### Beautiful Soup 4
+Open command window/terminal and run pip install beautifulsoup4
+
+#### Requests
+Open command window/terminal and run pip install requests
+
