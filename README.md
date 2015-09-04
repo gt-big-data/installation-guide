@@ -61,10 +61,13 @@ Clusterer
 For the Clusterer, you need to install a few Python libraries with Pip.
 
 ### Numpy
-NumPy is the fundamental package for scientific computing with Python.
+NumPy is the fundamental package for scientific computing with Python. Note: 
+
+pip install -U numpy
 
 ##### Windows
-Open a command window and run 	pip install -U numpy
+
+Install numpy and scipy from Anaconda: http://continuum.io/downloads for windows. For mac and linux, you can use pip
 
 ##### OSX
 Open a terminal and run sudo pip install -U numpy
@@ -74,7 +77,7 @@ You can make sure its properly installed by opening up a python interpreter and 
 ##### SciPy
 
 ##### Windows
-Open a command window and run 	pip install -U scipy
+Install numpy and scipy from Anaconda: http://continuum.io/downloads for windows. For mac and linux, you can use pip
 
 ##### OSX
 Open a terminal and run sudo pip install -U scipy
