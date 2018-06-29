@@ -1,4 +1,8 @@
 sudo apt-get update
-sudo apt install git-all
-sudo apt install mongodb-org
-sudo apt-get install python3.6
+sudo apt-get install -y --no-install-recommends \
+	git-all \
+	mongodb-org \
+	python3.6
+
+sudo service mongod start
+# Should say `[initandlisten] waiting for connections on port 27017` on next line

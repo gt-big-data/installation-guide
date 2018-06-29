@@ -1,127 +1,98 @@
 # GT Big Data Club Installation Guide
 
-Hi, this is the installation guide for GT Big Data Club. It contains instructions on how to install everything that you need to start hacking with us. This guide is separated by the different layers of our application (UI, Clustering, and Crawling) and by OS (Windows and Mac OSX). Check out the section that your interested in, grab a soda, and start installing!
+Hi, this is the installation guide for GT Big Data Club. It contains instructions on how to install everything that you need to start hacking with us. Check out the section that your interested in, grab a soda, and start installing!
+
+
+## Bootstrapping Scripts
+This file comes with bootstrapping scripts, if you don't want to read through this documentation. Download the appropriate script as shown below.
+
+**Windows:** Run `scripts/windows.cmd`
+
+**Linux:** Run `scripts/linux.sh`
+
+**Mac:** Run `scripts/mac.sh`
+
+NOTE: The above scripts will download a package manager to your computer to simplify downloading and updating packages in the future.
 
 
 ## General
 There are certain tools and technologies that all parts of the team interact with. These are:
 
-### Git:
+#### Package Manager
+Package managers make it easier to download programs, handle updates, and set your `PATH` variable. There are different package managers for different OS.
+
+**Windows:** [Chocolatey](https://chocolatey.org)
+
+**Linux:** [apt-get](https://help.ubuntu.com/community/AptGet/Howto)
+
+**Mac:** [Homebrew](https://brew.sh)
+
+Using a package manager will make the following steps quite trivial, as there will be no need to open up your browser at all!
+
+While others exist, the bootstrapping scripts use the package managers listed above. Feel free to use your favorite package manager!
+
+#### Git:
 A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-* Windows
+You can download Git by going to [this link](http://git-scm.com/download).
 
-The easiest way to get Git installed is by installing [GitHub for Windows](https://desktop.github.com/). The installer includes a command line version of Git as well as the GUI. It also works well with Powershell.
+If you would like a visual client for Git, GitHub offers a cross- platform app [here](https://desktop.github.com).
 
-*  Mac/ Linux
+#### MongoDB
+An extremely popular NoSQL database that organises data as documents of key- value pairs, instead of using tables and rows.
 
-There are several ways to install Git on a Mac. The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time. If you don’t have it installed already, it will prompt you to install it.
+The installer for MongoDB can also be obtained from the MongoDB [website](https://www.mongodb.com/download-center#community).
 
-A Git installer for Mac is also available for download at the [Git website](http://git-scm.com/download/mac).
+Also, optionally install [RoboMongo](http://robomongo.org/), an admin tool for MongoDB.
 
-You can also install it as part of the GitHub for Mac install. Their GUI Git tool has an option to install command line tools as well. You can download that tool from the [GitHub for Mac website](https://desktop.github.com/).
+#### Python and Pip.
+Python is a popular, high- level programming language with a multitude of uses. Pip is an installation tool that makes installing Python libraries relatively painless.
 
-### MongoDB
-An extremely popular NoSQL database that organises data as documents of key-value pairs, instead of using tables and rows.
+You can download the latest version of Python [here](https://www.python.org/downloads/)
 
-* Windows
+#### Conda
+Conda makes it easier to change between different versions of Python, and pre- bundles several scientific computing packages for Python
 
-The Windows installer for MongoDB can be obtained from the MongoDB [website](https://www.mongodb.org/downloads).
+## Server Frameworks
+#### Flask
+Flask is a Python microframework for writing web servers.
 
-*  Mac/ Linux
+Install with: `pip install flask`
 
-The Mac installer for MongoDB can also be obtained from the MongoDB [website](https://www.mongodb.org/downloads).
+#### Node.js and npm
+An open source, cross-platform runtime environment for server- side and networking applications. npm is a package manager that comes bundled with Node.js.
 
-Also, optionally install [RoboMongo](http://robomongo.org/), an admin tool for MongoDB. 
-
-### Python and pip.
-Python is a popular, high-level programming language with a multitude of uses. Pip is an installation tool that makes installing python libraries relatively painless. It comes bundled with Python after version 2.7.9. So, if you follow the instructions below you wont have to download it separately.
-
-*  Windows
-
-Download the Windows installer for python [here](https://www.python.org/downloads/release/python-2710/). 
-
-*  Mac/ Linux
-
-Python comes pre- installed on Mac. However, it is version 2.7.5. Since we need to use Python3, you can download the Mac installer for Python [here](https://www.python.org/downloads/)
-
-## UI
-### Node.js and npm
-An open source, cross-platform runtime environment for server-side and networking applications. Npm is a package manager that comes bundled with Nodejs.
-
-* All
-
-The installer for Node.js can be found [here](https://nodejs.org/download/)
-
-## Clusterer
-For the Clusterer, you need to install a few Python libraries with Pip.
-
-### 1. Numpy
-NumPy is the fundamental package for scientific computing with Python. Note: 
-
-pip install -U numpy
-
-* Windows
-
-Install numpy and scipy from Anaconda: http://continuum.io/downloads for windows. For mac and linux, you can use pip
-
-*  Mac/ Linux
-
-Open a terminal and run `sudo pip install -U numpy`
-
-You can make sure its properly installed by opening up a python interpreter and typing `import numpy`
-
-#### 2. SciPy
-
-* Windows
-
-Install numpy and scipy from Anaconda: http://continuum.io/downloads for Windows. For Mac and Linux, you can use pip
-
-*  Mac/ Linux
-
-Open a terminal and run `sudo pip install -U scipy`
-
-You can make sure its properly installed by opening up a python interpreter and typing 'import scipy'
-
-#### 3. Nltk
-Nltk is a leading platform for building Python programs to work with human language data.
-
-* Windows
-
-Open a command window and run `pip install -U nltk`
-
-*  Mac/ Linux
-
-Open a terminal and run `sudo pip install -U nltk`
-
-You can make sure its properly installed by opening up a python interpreter and typing 'import nltk'
-
-### Sklearn
-Leading python library for data mining and data analysis.
-
-* Windows
-
-Open a command window and run `pip install -U scikit-learn`
-
-*  Mac/ Linux
-
-Open a terminal and run `sudo pip install -U scikit-learn`
-
-You can make sure its properly installed by opening up a python interpreter and type `import scikit-learn`
+The installer for Node.js can be found [here](https://nodejs.org/en/)
 
 
-Crawler
---------
-#### Windows
+## Useful Python Libraries
 
-#### OSX
+#### Numpy
+NumPy is the fundamental package for scientific computing with Python.
 
+Install with: `pip install -U numpy`
 
-Entity Tagging
---------
-### Beautiful Soup 4
-Open command window/terminal and run `pip install beautifulsoup4`
+#### SciPy
+SciPy extends NumPy to have more functionality than NumPy.
 
-### Requests
-Open command window/terminal and run `pip install requests`
+Install with: `sudo pip install -U scipy`
 
+#### NLTK
+[NLTK](http://www.nltk.org) is a leading platform for building Python programs to work with human language data.
+
+Install with: `sudo pip install -U nltk`
+
+#### Sklearn
+Leading Python library for data mining and data analysis.
+
+Install with: `sudo pip install -U scikit-learn`
+
+#### Beautiful Soup 4
+Beautiful Soup is a Python library for parsing HTML.
+
+Install with: `pip install beautifulsoup4`
+
+#### Requests
+Requests is a Python library for making HTTP requests.
+
+Install with: `pip install requests`
