@@ -4,7 +4,10 @@ Hi, this is the installation guide for GT Big Data Club. It contains instruction
 
 
 ## Bootstrapping Scripts
-This file comes with bootstrapping scripts, if you don't want to read through this documentation. Download the appropriate script as shown below.
+
+This file comes with bootstrapping scripts, if you don't want to read through this documentation.
+
+1. Download the appropriate script as shown below.
 
 **Windows:** Run `scripts/windows.cmd`
 
@@ -14,6 +17,23 @@ This file comes with bootstrapping scripts, if you don't want to read through th
 
 NOTE: The above scripts will download a package manager to your computer to simplify downloading and updating packages in the future.
 
+2. [Install Miniconda](https://conda.io/miniconda.html)
+
+Then, install the packages required by running this command:
+
+```
+conda env create -f environment.yml
+```
+
+Now, anytime you want to run any Big Data Club stuff, simply run
+
+```
+source activate big-data-club
+```
+
+and you will have the required packages in that shell!
+
+<details>
 
 ## General
 There are certain tools and technologies that all parts of the team interact with. These are:
@@ -45,19 +65,19 @@ The installer for MongoDB can also be obtained from the MongoDB [website](https:
 
 Also, optionally install [RoboMongo](http://robomongo.org/), an admin tool for MongoDB.
 
-#### Python and Pip.
+#### Python and Pip
 Python is a popular, high- level programming language with a multitude of uses. Pip is an installation tool that makes installing Python libraries relatively painless.
 
 You can download the latest version of Python [here](https://www.python.org/downloads/)
 
 #### Conda
-Conda makes it easier to change between different versions of Python, and pre- bundles several scientific computing packages for Python
+Conda makes it easier to change between different versions of Python, and pre-bundles several scientific computing packages for Python
+
 
 ## Server Frameworks
+
 #### Flask
 Flask is a Python microframework for writing web servers.
-
-Install with: `pip install flask`
 
 #### Node.js and npm
 An open source, cross-platform runtime environment for server- side and networking applications. npm is a package manager that comes bundled with Node.js.
@@ -67,32 +87,22 @@ The installer for Node.js can be found [here](https://nodejs.org/en/)
 
 ## Useful Python Libraries
 
-#### Numpy
+#### [Numpy](http://www.numpy.org/)
 NumPy is the fundamental package for scientific computing with Python.
 
-Install with: `pip install -U numpy`
+#### [SciPy](https://www.scipy.org/)
+SciPy extends NumPy to have more functionality.
 
-#### SciPy
-SciPy extends NumPy to have more functionality than NumPy.
+#### [NLTK](http://www.nltk.org/)
+Leading platform for building Python programs to work with human language data.
 
-Install with: `sudo pip install -U scipy`
-
-#### NLTK
-[NLTK](http://www.nltk.org) is a leading platform for building Python programs to work with human language data.
-
-Install with: `sudo pip install -U nltk`
-
-#### Sklearn
+#### [Scikit- Learn](http://scikit-learn.org/stable/index.html)
 Leading Python library for data mining and data analysis.
 
-Install with: `sudo pip install -U scikit-learn`
-
-#### Beautiful Soup 4
+#### [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
 Beautiful Soup is a Python library for parsing HTML.
 
-Install with: `pip install beautifulsoup4`
-
-#### Requests
+#### [Requests](http://docs.python-requests.org/en/master/)
 Requests is a Python library for making HTTP requests.
 
-Install with: `pip install requests`
+</details>

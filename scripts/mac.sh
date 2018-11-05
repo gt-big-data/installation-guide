@@ -6,10 +6,3 @@
 
 brew update
 brew install git
-brew install python3
-brew install mongodb
-
-# Starting up MongoDB
-mkdir -p /data/db
-mongod
-# Next line should be this -> [initandlisten] waiting for connections on port 27017
