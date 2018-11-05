@@ -1,0 +1,13 @@
+name: big-data-club
+channels:
+  - javascript
+dependencies:
+  - python=3.7
+  - pip:
+    - beautifulsoup4
+    - flask
+    - nltk
+    - requests
+    - sklearn
+  - pandas
+  - jupyter
