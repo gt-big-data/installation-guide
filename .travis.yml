@@ -1,8 +1,10 @@
 warnings_are_errors: false
 
 language: python
-python:
-  - "3.7"
+sudo: required
+dist: xenial
+python: "3.7"
+
 install:
   - sudo apt-get update
   - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
