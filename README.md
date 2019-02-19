@@ -1,4 +1,4 @@
-# GT Big Data Club Installation Guide
+# GT Big Data Club Installation Guide ![Travis Build Status](https://travis-ci.org/gt-big-data/installation-guide.svg?branch=master)
 
 Hi, this is the installation guide for GT Big Data Club. It contains instructions on how to install everything that you need to start hacking with us. Check out the section that your interested in, grab a soda, and start installing!
 
