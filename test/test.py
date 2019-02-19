@@ -12,5 +12,6 @@ import nltk
 import requests
 import pandas
 import jupyter
+import matplotlib
 
 assert sys.version_info[:2] == (3,7), "Wrong Python version!"
