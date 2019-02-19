@@ -1,33 +1,25 @@
 warnings_are_errors: false
-
 notifications:
   slack:
     rooms:
-      - secure: "No0KZ9scAo9GopoI07IbcH6FhSweNMxvluznzod7b/kbBO11wxDvHhOGp3enS1+TOMBSody5x6PnSDlMGXaqHaBEHumNxsQDxKz5gCRAngBTZxePgMuL70VP05OjQg9LUhmMiycfdDWNjmZXjVLUbuO0Tyda6WtuH7xjRFrMhHW3luvjjk1FpUGEuhA9hdsr3g1eEXFciYfxBg3ZAI9IW4pEhph5K02lyV94ccAD5WLLfkrkCScIH3bh9pcBsMJf8cBL5aYb00Hc/fLt/LejHgbxzDQLJ8wZzN/RfM76WsCm6tRUimpE/qLlYO8kVx0QaPJutzKOkq/psMpwIEIG57cOEL3f03uwLH1FUAv+5z163VTj4S7ZGOqPOra9gF/Iy8QFSSlyqmg0q+mXqh3lLEU3cXdKOb/tSLzUq3Bcf4DO8PAtvdacFycFZvmRGmwAEuVhphOSmjkq4GugZQKsZvRbxtSo5KtgEXwsZ4EhkHkgR+3g1M7+dQlgRoO1lZJkuLLv906LfhEGTJGizEmjAHuOC8i6IOmCjYg0EGVLDCcvVyudvEXmPZxZY9KRzWO6BH7doZJPmrSQS7KtGBsMvefS3TPPAzCeTQ1LRcSauL4Edwodv9rHO1gSmlSjTXvBLxmXSqQZM6u1t0U96dGwHaYgomEVl6CpCjGosmZqzaE="
+      secure: peQ4xBF+f3d/gObWLdBHe7UeWwwsZbqJArRZ5kRc1on7HQcHU1Dey5MRmxiDRq/9JE6Yt197x1uk6smCwPT1oW/b303T7JHfuUcUz4zQM8cfr8SpkuBcZXtvzalbztq5ooKbmkg4/GhEoofKepweozN5DO4h/Z6XQbQ+kkeyDlBNytnGgIuhj1Ht7AtRwTlj2RBchnFkOP93dbxC9QWge7pFgbY3UUO4ctQ7NLpX/dQIAyrsgnQHIgmLTvsYIJmV9eKQ3ObhRM2il7JoxXTaBSccDRdVRSGdixW2lzeOwBVWJoISeLINnJiCBIKvPSMfhW4EvQXDIK+86dVDh/z4qX6WY5q87l5PH7WA525kK5B1QR4Wv4hoVGFVJoiLX6EKCYdYy3SzxquehCdAYS9vDf3kWf8ywri/yCjxz98hu1XBCJMa8WE/7B2pKQj08fbqsUmgfLBFo5Pqaug4ocBzBL9U3MIxYQcaqOoI7m5Yr9tnlAeyZR/xZz9Roe7j9z/6tEb6s3o4VdlLaVyS2mV9laiy5M5kzDDorsBBf584fbRbU0qu6fJuaKsBrFH+6nqJz1Z8Cj9hsls/VxrhFLazD2WFMKziFOT+iBUN3VJ8ez+BDxYJQjMF8OK8pm2rMmdnWD1gZKVOMjVhBFpBCNsob9aTbAK+62ekAnx/S35pKa0=
   email: false
-
-
 language: python
 sudo: required
 dist: xenial
-python: "3.7"
-
+python: '3.7'
 install:
-  - sudo apt-get update
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
-    else
-      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  # Useful for debugging any issues with conda
-  - conda info -a
-  - conda env create -f environment.yml
-  - source activate big-data-club
-
+- sudo apt-get update
+- if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+  -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  -O miniconda.sh; fi
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+- conda info -a
+- conda env create -f environment.yml
+- source activate big-data-club
 script:
-  - python test/test.py
+- python test/test.py
