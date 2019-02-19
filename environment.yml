@@ -7,6 +7,7 @@ dependencies:
     - cloudpickle
     - beautifulsoup4
     - flask
+    - matplotlib
     - nltk
     - requests
     - sklearn
