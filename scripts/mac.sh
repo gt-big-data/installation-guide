@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script to setup dev environment on Mac
 
 # Homebrew makes it easier to download all other programs
